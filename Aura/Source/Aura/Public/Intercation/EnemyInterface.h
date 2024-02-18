@@ -20,8 +20,9 @@ class AURA_API IEnemyInterface
 {
 	GENERATED_BODY()
 
-	virtual void Highlight() = 0;
-	virtual void Unhighlight() = 0;
+
 public:
+	virtual void HighlightActor() = 0;
+	virtual void UnhighlightActor() = 0;
 };
  

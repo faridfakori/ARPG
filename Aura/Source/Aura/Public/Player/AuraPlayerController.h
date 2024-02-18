@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+#include "Intercation/EnemyInterface.h"
 #include "AuraPlayerController.generated.h"
 
 
@@ -24,6 +25,7 @@ protected:
 
 	virtual void BeginPlay() override;
 	virtual void SetupInputComponent() override;
+	virtual void PlayerTick(float DeltaSeconds) override;
 
 private:
 
@@ -34,4 +36,7 @@ private:
 
 	void Move(const FInputActionValue& Value);
 
+	void CursorTrace();
+	IEnemyInterface* LastActor;
+	IEnemyInterface* CurrentActor;
 };
