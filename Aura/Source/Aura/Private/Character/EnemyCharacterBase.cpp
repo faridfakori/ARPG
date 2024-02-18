@@ -3,3 +3,10 @@
 
 #include "Character/EnemyCharacterBase.h"
 
+void AEnemyCharacterBase::Highlight()
+{
+}
+
+void AEnemyCharacterBase::Unhighlight()
+{
+}
