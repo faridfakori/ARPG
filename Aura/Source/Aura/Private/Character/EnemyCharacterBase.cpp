@@ -32,5 +32,13 @@ void AEnemyCharacterBase::UnhighlightActor()
 	
 }
 
+void AEnemyCharacterBase::BeginPlay()
+{
+	Super::BeginPlay();
+	check(AbilitySystemComponent);
+	AbilitySystemComponent ->InitAbilityActorInfo(this,this);
+	
+}
+
 
 
